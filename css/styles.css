@@ -1,0 +1,26 @@
+body {
+    background-image: url(https://t4.ftcdn.net/jpg/02/67/40/21/360_F_267402109_jZvsqRQUvSxohAOmcUt549jlapqoRHM0.jpg);
+    background-size: cover;
+}
+
+.bg-image {
+    background-image: url(https://blog.icons8.com/wp-content/uploads/2020/02/how-to-create-gradient-article-1000x600.jpg);
+    background-size: cover;
+}
+
+.nav-link {
+    color: black;
+}
+
+#link1 {
+    color: red;
+    text-decoration: none;
+}
+
+#link1:hover {
+    color: yellow;
+}
+
+#link1:active {
+    color: green;
+}
