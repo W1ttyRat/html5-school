@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url(https://scontent-hel3-1.xx.fbcdn.net/v/t39.30808-6/496948370_3610438302595337_6797879718641862835_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=hn4hAAXId3MQ7kNvwFOw2iv&_nc_oc=AdnoFfVubckVDPucbIgzW2ycrsS9aYx_3IaSGUurOPS8_JxDstw38OlSL7Z56-MUUSm_PryDa4fZRSblHLJkkGH9&_nc_zt=23&_nc_ht=scontent-hel3-1.xx&_nc_gid=pL_5I-I2FfVAwGOH9-uFWg&oh=00_AfsQfCkd6aYWtoVj-2GC-lFHrFNJUa9LnbrMNb_kJOFCug&oe=6998DF8E) center / cover no-repeat;
+}
+
+main {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+}
