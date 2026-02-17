@@ -26,10 +26,25 @@
     left: 194px;
     top: 420px;
     transform-origin: 50% 0%;
-    transform: rotate(15deg);
+    transform: rotate(0deg);
 }
+
+
 
 .clock-hand {
     top: 10px;
     left: 158px;
+    transform-origin: center 172px;
+}
+
+#secondHand {
+    transform: rotate(0deg);
+}
+
+#minuteHand {
+    transform: rotate(0deg);
+}
+
+#hourHand {
+    transform: rotate(0deg);
 }
