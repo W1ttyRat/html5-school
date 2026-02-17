@@ -1,0 +1,35 @@
+#box-div {
+    width: 277px;
+    height: 473px;
+}
+
+.clock {
+    width: 554px;
+    height: 945px;
+    position: relative;
+    transform-origin: 0% 0%;
+    transform: scale(0.5)
+}
+
+.clock * {
+    position: absolute;
+}
+
+.clock-face {
+    width: 369px;
+    height: 369px;
+    left: 92px;
+    top: 88px;
+}
+
+.pendulum {
+    left: 194px;
+    top: 420px;
+    transform-origin: 50% 0%;
+    transform: rotate(15deg);
+}
+
+.clock-hand {
+    top: 10px;
+    left: 158px;
+}

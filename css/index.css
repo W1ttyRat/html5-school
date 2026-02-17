@@ -24,3 +24,14 @@ body {
 #link1:active {
     color: green;
 }
+
+#tlu-logo {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+#brand-logo {
+    max-width: 40%;
+    height: auto;
+}

@@ -15,7 +15,7 @@
             crossorigin="anonymous"
         />
 
-        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/index.css" />
 
         <script src="js/index.js" defer></script>
         <script src="js/app.js" defer></script>
@@ -30,43 +30,64 @@
             <nav class="navbar" id="home">
                 <div class="container-fluid mb-3">
                     <div class="container-fluid d-flex m-auto pb-2 fixed-top bg-dark-subtle bg-image">
-                        <div class="container-fluid border">
-                            <ul class="nav nav-pills">
+                        <div class="container-fluid d-inline-block w-auto mt-1 pt-1">
+                            <a class="navbar-brand" href="#">
+                                <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo">
+                            </a>
+                        </div>
+                        <div class="container-fluid mt-1">
+                            <ul class="nav nav-tabs">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#home">Pealeht</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#foto">Fotod</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#meedia">Meedia</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#gaudeamus">Gaudeamus</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Teemad
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#foto">Fotod</a></li>
+                                        <li><a class="dropdown-item" href="#meedia">Meedia</a></li>
+                                        <li><a class="dropdown-item" href="#gaudeamus">Gaudeamus</a></li>
+                                        <li><a class="dropdown-item" href="#kaart">Kaardid</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link fw-bold" href="/hobi.html">Hobi</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link fw-bold" href="/clock.html">Kell</a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="container-fluid d-flex justify-content-end border">
+                        <div class="container-fluid d-flex justify-content-end mt-1">
                             <form action="" class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Otsi</button>
                             </form>
                         </div>
-                        <button id="themeToggle" class="btn btn-outline-secondary btn-sm ms-2" type="button">L/D</button>
+                        <div class="container-fluid d-inline-block w-auto justify-content-end">
+                            <button id="themeToggle" class="btn btn-outline-secondary ms-2 mt-1" type="button">L/D</button>
+                        </div>
                     </div>
-                    <img class="img-fluid" src="src/banner.png" alt="banner" style="width: 100%">
                 </div>
             </nav>
         </header>
 
 
         <main>
-            <div class="container-fluid border border-5 border-primary mb-2">
-                <h1 class="display-3 fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia magni ex provident <a id="link1" href="#">Lorem, ipsum dolor.</a> exercitationem, est id dolorum ut et nobis rerum debitis a assumenda laborum iste odio consequatur!</p>
+            <div class="container-fluid px-0 mt-3">
+                <img class="w-100 img-fluid" src="src/banner.png" alt="banner">
+            </div>
+            <div class="container-fluid mb-2">
+                <div class="row">
+                    <div class="col-10">
+                        <h1 class="display-3 fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia magni ex provident <a id="link1" href="#">Lorem, ipsum dolor.</a> exercitationem, est id dolorum ut et nobis rerum debitis a assumenda laborum iste odio consequatur!</p>
+                    </div>
+                    <div class="col-2">
+                        <img src="src/tlu_h200.png" alt="TLÜ logo" class="img-fluid" id="tlu-logo">
+                    </div>
+                </div>
             </div>
             <section id="foto">
                 <div class="container-fluid  border border-4 border-secondary pb-2">
@@ -147,49 +168,119 @@
                         <h2>Gaudeamus</h2>
                         <p>Üliõpilashümniks on laul "Gaudeamus".</p>
                     </hgroup>
-                    <pre class="fw-bold">
-                        :,: Gaudeamus igitur
-                        juvenes dum sumus! :,:
-                        Post jucundam juventutem,
-                        post molestam senectutem
-                        :,: nos habebit humus! :,:
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-5">
+                                <pre class="fw-bold">
+                                    :,: Gaudeamus igitur
+                                    juvenes dum sumus! :,:
+                                    Post jucundam juventutem,
+                                    post molestam senectutem
+                                    :,: nos habebit humus! :,:
 
-                        :,: Ubi sunt, qui ante nos
-                        in mundo fuere? :,:
-                        Vadite ad superos,
-                        transite ad inferos,
-                        :,: ubi iam fuere. :,:
+                                    :,: Ubi sunt, qui ante nos
+                                    in mundo fuere? :,:
+                                    Vadite ad superos,
+                                    transite ad inferos,
+                                    :,: ubi iam fuere. :,:
 
-                        :,: Vita nostra brevis est,
-                        brevi finietur. :,:
-                        Venit mors velociter,
-                        rapit nos atrociter,
-                        :,: nemini parcetur. :,:
+                                    :,: Vita nostra brevis est,
+                                    brevi finietur. :,:
+                                    Venit mors velociter,
+                                    rapit nos atrociter,
+                                    :,: nemini parcetur. :,:
 
-                        :,: Vivat academia,	
-                        vivant professores! :,:	
-                        Vivat membrum quodlibet,
-                        vivant membra quaelibet,
-                        :,: semper sint in flore! :,:
+                                    :,: Vivat academia,	
+                                    vivant professores! :,:	
+                                    Vivat membrum quodlibet,
+                                    vivant membra quaelibet,
+                                    :,: semper sint in flore! :,:
 
-                        :,: Vivant omnes virgines	
-                        faciles, formosae! :,:	
-                        Vivant et mulieres
-                        tenerae, amabiles,	
-                        :,: atque laboriosae! :,:
+                                    :,: Vivant omnes virgines	
+                                    faciles, formosae! :,:	
+                                    Vivant et mulieres
+                                    tenerae, amabiles,	
+                                    :,: atque laboriosae! :,:
 
-                        :,: Vivat et respublica	
-                        et qui illam regit! :,:	
-                        Vivat nostra civitas,	
-                        maecenatum caritas,
-                        :,: quae nos hic protegit! :,:
+                                    :,: Vivat et respublica	
+                                    et qui illam regit! :,:	
+                                    Vivat nostra civitas,	
+                                    maecenatum caritas,
+                                    :,: quae nos hic protegit! :,:
 
-                        :,: Pereat tristitia, 
-                        pereant osores! :,:	
-                        Pereat diabolus,	
-                        quivis antiburschius,
-                        :,: atque irrisores! :,:
-                    </pre>
+                                    :,: Pereat tristitia, 
+                                    pereant osores! :,:	
+                                    Pereat diabolus,	
+                                    quivis antiburschius,
+                                    :,: atque irrisores! :,:
+                                </pre>
+                            </div>
+                            <div class="col-7 mb-3">
+                                <h2 class="text-center">Lorem, ipsum dolor.</h2>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, maxime?</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, similique?</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, nisi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid d-flex flex-column align-items-center border border-3 border-primary mb-2" id="kaart">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="https://picsum.photos/id/684/400/200" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="https://picsum.photos/id/685/400/200" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="https://picsum.photos/id/686/400/200" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <img src="https://picsum.photos/id/687/400/200" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

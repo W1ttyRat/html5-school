@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="et" data-bs-theme="dark">
+<html lang="et">
     <head>
-        <title>Hobi</title>
+        <title>Clock</title>
+        <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -15,10 +16,9 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="css/hobiStyle.css" />
 
-        <script src="js/hobi.js" defer></script>
-        <script src="js/app.js" defer></script>
+        <link rel="stylesheet" href="css/clock.css" />
+        
     </head>
 
     <body>
@@ -51,22 +51,18 @@
             </nav>
         </header>
         <main>
-            <div class="container-lg">
-                <h1 class="text-center mb-5 mt-5">Minu hobi</h1>
-                <section class="container-fluid text-center fw-bolder mb-5">
-                    <h3 class="pb-2">Kross</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil tempora consequuntur magnam ea, ut ratione earum. Vel sunt quia modi!</p>
-                    <div class="container-fluid">
-                        <video src="src/Facebook.mp4" controls></video>
+            <div class="container-fluid bg-primary mt-5 p-0" id="box-div">
+                <div class="clock">
+                    <img src="src/clock_box.png" alt="Clock box" class="clock-box">
+                    <img src="src/clock_frame.png" alt="Clock frame" class="clock-frame">
+                    <img src="src/clock_pendulum_2.png" alt="clock pendulum" class="pendulum">
+                    <img src="src/clock_face_2.png" alt="Clock face" class="clock-face">
+                    <div class="clock-face">
+                        <img src="src/second_hand.png" alt="second hand" class="clock-hand">
+                        <img src="src/minute_hand.png" alt="minute hand" class="clock-hand">
+                        <img src="src/hour_hand.png" alt="hour hand" class="clock-hand">
                     </div>
-                </section>
-                <section class="container-fluid text-center fw-bolder">
-                    <h3>Laskmine</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, rem?</p>
-                    <div class="container-fluid">
-                        <video src="src/laskmine.mp4" controls width="300" height="500"></video>
-                    </div>
-                </section>
+                </div>
             </div>
         </main>
         <footer>
