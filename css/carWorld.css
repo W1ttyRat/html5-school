@@ -23,3 +23,21 @@
     transform: rotate(0deg);
 
 }
+
+.car-wheel {
+    z-index: 2;
+    position: relative;
+    width: 47px;
+    transform: rotate(0deg);
+    
+}
+
+#wheel1 {
+    left: 753px;
+    top: 482px;
+}
+
+#wheel2 {
+    left: 842px;
+    top: 482px;
+}
