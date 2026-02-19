@@ -1,43 +1,53 @@
+main {
+    scale: 0.6;
+    margin-top: 50px;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/207529/pexels-photo-207529.jpeg?cs=srgb&dl=pexels-pixabay-207529.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 #car-box {
     position: absolute;
     z-index: 1;
-    scale: 0.8;
 }
 
 #earth-box {
     position: absolute;
-    scale: 0.8;
 }
 
 #car {
     position: relative;
-    width: 200px;
-    left: 950px;
-    top: 460px;
+    width: 150px;
+    left: 625px;
+    top: 120px;
 }
 
 #earth {
     position: relative;
-    left: 100px;
+    left: 300px;
     transform-origin: 50% 50%;
-    transform: rotate(0deg);
+    transform: rotate(-0deg);
+    width: 800px;
 
 }
 
 .car-wheel {
-    z-index: 2;
-    position: relative;
-    width: 47px;
+    position: absolute;
+    width: 25px;
     transform: rotate(0deg);
     
 }
 
 #wheel1 {
-    left: 753px;
-    top: 482px;
+    left: 644px;
+    top: 172px;
 }
 
 #wheel2 {
-    left: 842px;
-    top: 482px;
+    left: 730px;
+    top: 172px;
 }
