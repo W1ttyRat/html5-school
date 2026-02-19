@@ -1,0 +1,25 @@
+#car-box {
+    position: absolute;
+    z-index: 1;
+    scale: 0.8;
+}
+
+#earth-box {
+    position: absolute;
+    scale: 0.8;
+}
+
+#car {
+    position: relative;
+    width: 200px;
+    left: 950px;
+    top: 460px;
+}
+
+#earth {
+    position: relative;
+    left: 100px;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+
+}
