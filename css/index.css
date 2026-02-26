@@ -32,6 +32,6 @@ body {
 }
 
 #brand-logo {
-    max-width: 40%;
-    height: auto;
+    max-height: 50px;
+    width: auto;
 }

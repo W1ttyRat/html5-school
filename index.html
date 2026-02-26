@@ -27,50 +27,46 @@
 
 
         <header>
-            <nav class="navbar" id="home">
-                <div class="container-fluid mb-3">
-                    <div class="container-fluid d-flex m-auto pb-2 fixed-top bg-dark-subtle bg-image">
-                        <div class="container-fluid d-inline-block w-auto mt-1 pt-1">
-                            <a class="navbar-brand" href="#">
-                                <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo">
-                            </a>
-                        </div>
-                        <div class="container-fluid mt-1">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#home">Pealeht</a>
-                                </li>
+            <nav class="navbar navbar-expand-lg" id="home">
+                <div class="container-fluid">
+                    <div class="d-inline-block w-auto mt-1 pt-1">
+                        <a class="navbar-brand" href="#">
+                            <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav justify-content-center w-75">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Pealeht</a>
+                            </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Teemad
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#foto">Fotod</a></li>
-                                        <li><a class="dropdown-item" href="#meedia">Meedia</a></li>
-                                        <li><a class="dropdown-item" href="#gaudeamus">Gaudeamus</a></li>
-                                        <li><a class="dropdown-item" href="#kaart">Kaardid</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold" href="clock.html">Kell</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="container-fluid d-flex justify-content-end mt-1">
-                            <form action="" class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Otsi</button>
-                            </form>
-                        </div>
-                        <div class="container-fluid d-inline-block w-auto justify-content-end">
-                            <button id="themeToggle" class="btn btn-outline-secondary ms-2 mt-1" type="button">L/D</button>
-                        </div>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Teemad
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#foto">Fotod</a></li>
+                                    <li><a class="dropdown-item" href="#meedia">Meedia</a></li>
+                                    <li><a class="dropdown-item" href="#gaudeamus">Gaudeamus</a></li>
+                                    <li><a class="dropdown-item" href="#kaart">Kaardid</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="clock.html">Kell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
+                            </li>
+                        </ul>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Otsi</button>
+                        </form>
                     </div>
                 </div>
             </nav>
@@ -83,11 +79,11 @@
             </div>
             <div class="container-fluid mb-2">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-12 col-md-10">
                         <h1 class="display-3 fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
                         <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia magni ex provident <a id="link1" href="#">Lorem, ipsum dolor.</a> exercitationem, est id dolorum ut et nobis rerum debitis a assumenda laborum iste odio consequatur!</p>
                     </div>
-                    <div class="col-2">
+                    <div class="col-12 col-md-2">
                         <img src="src/tlu_h200.png" alt="TLÜ logo" class="img-fluid" id="tlu-logo">
                     </div>
                 </div>
@@ -140,21 +136,21 @@
             <section id="meedia">
                 <div class="container-fluid text-center border border-danger">
                     <h2 class="mb-5 display-2">Meedia veebis</h2>
-                    <div class="container-fluid mb-5">
+                    <div class="mb-5">
                         <hgroup>
                         <h3 class="display-5">Heli veebis</h3>
                         <p>Veebis saab kasutada mitmeid audio failivorminguid. Standardis on ette nähtud: wav, ogg, mp3 ja m4a</p>
                         </hgroup>
-                        <audio src="src/04_Track_4.mp3" controls class="w-50"></audio>
+                        <audio src="src/04_Track_4.mp3" controls class="w-75 w-md-50"></audio>
                     </div>
-                    <div class="container-fluid mb-5">
+                    <div class="mb-5">
                         <hgroup>
                         <h3 class="display-5">Video veebis</h3>
                         <p>Veebis saab kasutada mitmeid video failivorminguid. Standardis on ette nähtud: mp4, webm ja ogv</p>
                         </hgroup>
-                        <video src="src/haridusvalgustab.mp4" controls preload="auto" poster="src/tlu_annab_hariduse.jpg" class="w-50"></video>
+                        <video src="src/haridusvalgustab.mp4" controls preload="auto" poster="src/tlu_annab_hariduse.jpg" class="w-75 w-md-50"></video>
                     </div>
-                    <div class="container-fluid mb-5">
+                    <div class="mb-5">
                         <hgroup>
                             <h3 class="display-5">Youtube video veebilehel</h3>
                             <p>Lehele tuleb lisada vastav kood, mida leiab YouTube'i jagamisvalikust.</p>
@@ -173,7 +169,7 @@
                     </hgroup>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-12 col-md-5">
                                 <pre class="fw-bold">
                                     :,: Gaudeamus igitur
                                     juvenes dum sumus! :,:
@@ -218,16 +214,16 @@
                                     :,: atque irrisores! :,:
                                 </pre>
                             </div>
-                            <div class="col-7 mb-3">
+                            <div class="col-12 col-md-7 mb-3">
                                 <h2 class="text-center">Lorem, ipsum dolor.</h2>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-12 col-sm-6 col-md-4">
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, maxime?</p>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-12 col-sm-6 col-md-4">
                                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, similique?</p>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-12 col-sm-6 col-md-4">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, nisi.</p>
                                     </div>
                                 </div>
@@ -237,9 +233,9 @@
                 </div>
             </section>
             <section>
-                <div class="container-fluid d-flex flex-column align-items-center border border-3 border-primary mb-2" id="kaart">
+                <div class="container-lg mb-2 p-3" id="kaart">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
                             <div class="card">
                                 <img src="https://picsum.photos/id/684/400/200" alt="">
                                 <div class="card-body">
@@ -250,7 +246,7 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
                             <div class="card">
                                 <img src="https://picsum.photos/id/685/400/200" alt="">
                                 <div class="card-body">
@@ -261,7 +257,7 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
                             <div class="card">
                                 <img src="https://picsum.photos/id/686/400/200" alt="">
                                 <div class="card-body">
@@ -272,7 +268,7 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
                             <div class="card">
                                 <img src="https://picsum.photos/id/687/400/200" alt="">
                                 <div class="card-body">
@@ -291,7 +287,7 @@
 
         <footer>
             
-             <div class="container-fluid card-footer text-muted border-top">
+             <div class="container-fluid card-footer text-muted border-top border-secondary text-center">
                 <p>Tallinna Ülikool, Digitehnoloogia instituut</p>
                 <address>Narva mnt 25, Tallinn 10120</address>
              </div>
