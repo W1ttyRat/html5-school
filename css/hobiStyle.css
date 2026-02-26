@@ -11,3 +11,12 @@ main {
     height: calc(100vh - 120px);
     overflow-y: auto;
 }
+
+
+#video1 {
+    max-width: 700px;
+}
+#video2 {
+    max-width: 300px;
+    max-height: 500px;
+}
