@@ -24,36 +24,41 @@
 
     <body>
         <header>
-            <nav class="navbar" id="home">
-                <div class="container-fluid mb-3">
-                    <div class="container-fluid d-flex m-auto pb-2 fixed-top bg-dark-subtle bg-image">
-                        <div class="container-fluid border">
-                            <ul class="nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Pealeht</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="hobi.html">Hobi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="clock.html">Kell</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Car World</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="container-fluid d-flex justify-content-end border">
-                            <form action="" class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Otsi</button>
-                            </form>
-                        </div>
-                        <button id="themeToggle" class="btn btn-outline-secondary btn-sm ms-2" type="button">L/D</button>
+            <nav class="navbar navbar-expand-lg" id="home">
+                <div class="container-fluid">
+                    <div class="d-inline-block w-auto mt-1 pt-1">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo" style="max-height: 50px; width: auto;">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+                        <ul class="nav navbar-nav justify-content-center w-75">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="index.html">Pealeht</a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold " href="clock.html">Kell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold active" aria-current="page" href="carWorld.html">Car World</a>
+                            </li>
+                        </ul>
+                        <form action="" class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Otsi</button>
+                        </form>
                     </div>
                 </div>
             </nav>
         </header>
+
         <main>
             <div id="world">
                 <div id="car-box">
