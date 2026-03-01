@@ -1,70 +1,53 @@
-#world {
-    scale: 0.7;
-    margin-top: 50px;
-}
-
-body {
-    background-image: url(https://images.pexels.com/photos/207529/pexels-photo-207529.jpeg?cs=srgb&dl=pexels-pixabay-207529.jpg&fm=jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-#car-box {
+#jaanus {
     position: absolute;
-    z-index: 2;
-}
-
-#earth-box {
-    position: absolute;
-}
-
-#car {
-    position: relative;
-    width: 150px;
-    left: 625px;
-    top: 120px;
-}
-
-#earth {
-    z-index: 1;
-    position: absolute;
-    left: 300px;
-    top: 0px;
-    transform-origin: 50% 50%;
-    transform: rotate(-0deg);
-    width: 800px;
-
-}
-
-.car-wheel {
-    z-index: 2;
-    position: absolute;
-    width: 25px;
-    transform: rotate(0deg);
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
     
 }
 
-#wheel1 {
-    left: 644px;
-    top: 172px;
-}
-
-#wheel2 {
-    left: 730px;
-    top: 172px;
-}
-
-#moon-box {
-    z-index: 2;
-    position: absolute;
-    left: 650px;
-    top: -25px;
-    transform-origin: 50px 425px;
-}
-
-#moon {
-    width: 150px;
+#earth-img {
+    width: 50%;
+    height: auto;
+    margin: auto;
     transform-origin: 50% 50%;
     transform: rotate(0deg);
+}
+
+#moon-img {
+    position: relative;
+    right: 65%;
+    width: 10%;
+    transform-origin: 250% 50%;
+    transform: rotate(0deg);
+    
+    
+}
+
+#car-img {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    right: 32%;
+    bottom: 20%;
+}
+
+#car-body-img{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#car-wheel-img-1, #car-wheel-img-2 {
+    position: absolute;
+    width: 20%;
+    top: 45%;
+}
+
+#car-wheel-img-1 {
+    right: 12%;
+}
+
+#car-wheel-img-2 {
+    right: 68%;
 }

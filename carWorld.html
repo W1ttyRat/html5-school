@@ -19,6 +19,7 @@
 
         <link rel="stylesheet" href="css/carWorld.css" />
 
+        
         <script src="js/carWorld.js" defer></script>
     </head>
 
@@ -60,18 +61,14 @@
         </header>
 
         <main>
-            <div id="world">
-                <div id="car-box">
-                    <img src="src/redCar.png" alt="Car image" id="car">
-                    <img src="src/car-wheel.png" alt="" class="car-wheel" id="wheel1">
-                    <img src="src/car-wheel.png" alt="" class="car-wheel" id="wheel2">
+            <div class="container justify-content-center text-center" id="jaanus">
+                <img src="src/earth.png" alt="Earth image" id="earth-img">
+                <div id="car-img">
+                    <img src="src/redCar.png" alt="" id="car-body-img">
+                    <img src="src/car-wheel.png" alt="" id="car-wheel-img-1" class="wheel">
+                    <img src="src/car-wheel.png" alt="" id="car-wheel-img-2" class="wheel">
                 </div>
-                <div id="earth-box">
-                    <img src="src/earth.png" alt="Earth image" id="earth">
-                </div>
-                <div id="moon-box">
-                    <img src="src/moon.png" alt="" id="moon">
-                </div>
+                <img src="src/moon.png" alt="moon image" id="moon-img">
             </div>
             <div class="d-inline-block m-3">
                 <div class="mb-2">
@@ -83,10 +80,6 @@
                     <button class="btn btn-outline-success me-2" id="fasterEarth">+</button>
                     <button class="btn btn-outline-primary me-2" id="rotateEarth">Pööra maad</button>
                     <button class="btn btn-outline-danger me-2" id="slowerEarth">-</button>
-                </div>
-                <div id="showMoon">
-
-                </div>
             </div>
         </main>
         <footer>
