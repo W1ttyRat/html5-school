@@ -1,176 +1,200 @@
 <!doctype html>
 <html lang="et" data-bs-theme="dark">
-    <head>
-        <title>Veeb ja Meedia</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
+<head>
+  <title>Veeb ja Meedia</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <link rel="stylesheet" href="css/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-        <script src="js/index.js" defer></script>
-        <script src="js/app.js" defer></script>
+  <link rel="stylesheet" href="css/index.css" />
 
-    </head>
+  <script src="js/index.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
 
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg" id="home">
+      <div class="container-fluid">
+        <div class="d-inline-block w-auto mt-1 pt-1">
+          <a class="navbar-brand" href="#">
+            <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo" style="max-height: 50px; width: auto" />
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
+          <ul class="nav navbar-nav justify-content-center w-75">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="#home">Pealeht</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Teemad
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#foto">Fotod</a></li>
+                <li><a class="dropdown-item" href="#meedia">Meedia</a></li>
+                <li>
+                  <a class="dropdown-item" href="#gaudeamus">Gaudeamus</a>
+                </li>
+                <li><a class="dropdown-item" href="#kaart">Kaardid</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="clock.html">Kell</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="calculator.html">Kalkulaator</a>
+            </li>
+          </ul>
+          <form action="" class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">
+              Otsi
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <body>
-
-
-        <header>
-            <nav class="navbar navbar-expand-lg" id="home">
-                <div class="container-fluid">
-                    <div class="d-inline-block w-auto mt-1 pt-1">
-                        <a class="navbar-brand" href="#">
-                            <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo" style="max-height: 50px; width: auto;">
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse mt-1" id="navbarNavDropdown">
-                        <ul class="nav navbar-nav justify-content-center w-75">
-                            <li class="nav-item">
-                                <a class="nav-link active fw-bold" aria-current="page" href="#home">Pealeht</a>
-                            </li>
-                                <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Teemad
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#foto">Fotod</a></li>
-                                    <li><a class="dropdown-item" href="#meedia">Meedia</a></li>
-                                    <li><a class="dropdown-item" href="#gaudeamus">Gaudeamus</a></li>
-                                    <li><a class="dropdown-item" href="#kaart">Kaardid</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold" href="clock.html">Kell</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
-                            </li>
-                        </ul>
-                        <form action="" class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Otsi" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Otsi</button>
-                        </form>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-
-        <main>
-            <div class="container-fluid px-0 mt-3">
-                <img class="w-100 img-fluid" src="src/banner.png" alt="banner">
-            </div>
-            <div class="container-fluid mb-2">
-                <div class="row">
-                    <div class="col-12 col-md-10">
-                        <h1 class="display-3 fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                        <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, officia magni ex provident <a id="link1" href="#">Lorem, ipsum dolor.</a> exercitationem, est id dolorum ut et nobis rerum debitis a assumenda laborum iste odio consequatur!</p>
-                    </div>
-                    <div class="col-12 col-md-2">
-                        <img src="src/tlu_h200.png" alt="TLÜ logo" class="img-fluid" id="tlu-logo">
-                    </div>
-                </div>
-            </div>
-            <section id="foto">
-                <div class="container-fluid  border border-4 border-secondary pb-2">
-                    <h2>Veebis saab kasutada</h2>
-                    <div class="container-fluid border border-3 border-info">
-                        <ol>
-                            <li>Teksti
-                                <ul>
-                                    <li>Pealkirju</li>
-                                    <li>Tavateksti</li>
-                                    <li>Loendeid</li>
-                                </ul>
-                            </li>
-                            <li>Graafikat</li>
-                            <li>Heli</li>
-                            <li>Videot</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="container-fluid border border-warning pb-2">
-                    <h3>Mõistete loend</h3>
-                    <div class="container-fluid border border-danger-subtle">
-                        <dl>
-                            <dt>Internet</dt>
-                            <dd>Ülemaailmne arvutivõrke ühendav võrk</dd>
-                        </dl>
-                    </div>
-                    <div class="container-fluid border border-danger">
-                        <dl>
-                            <dt>Veeb</dt>
-                            <dd>Ülemaailmne hajus hüpertekstil põhinev infosüsteem</dd>
-                        </dl>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="container-fluid border border-secondary mb-2">
-                    <h2>Fotod veebilehel</h2>
-                    <figure class="figure">
-                        <img src="src/house.png" alt="pilt" class="img-fluid">
-                        <figcaption>
-                            Vaade Tallinna Ülikooli Astra õppehoonele
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
-            <section id="meedia">
-                <div class="container-fluid text-center border border-danger">
-                    <h2 class="mb-5 display-2">Meedia veebis</h2>
-                    <div class="mb-5">
-                        <hgroup>
-                        <h3 class="display-5">Heli veebis</h3>
-                        <p>Veebis saab kasutada mitmeid audio failivorminguid. Standardis on ette nähtud: wav, ogg, mp3 ja m4a</p>
-                        </hgroup>
-                        <audio src="src/04_Track_4.mp3" controls class="w-75 w-md-50"></audio>
-                    </div>
-                    <div class="mb-5">
-                        <hgroup>
-                        <h3 class="display-5">Video veebis</h3>
-                        <p>Veebis saab kasutada mitmeid video failivorminguid. Standardis on ette nähtud: mp4, webm ja ogv</p>
-                        </hgroup>
-                        <video src="src/haridusvalgustab.mp4" controls preload="auto" poster="src/tlu_annab_hariduse.jpg" class="w-75 w-md-50"></video>
-                    </div>
-                    <div class="mb-5">
-                        <hgroup>
-                            <h3 class="display-5">Youtube video veebilehel</h3>
-                            <p>Lehele tuleb lisada vastav kood, mida leiab YouTube'i jagamisvalikust.</p>
-                        </hgroup>
-                        <div class="container-fluid d-flex justify-content-center">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zBjJUV-lzHo?si=YkfB4Sh16blqsN0a" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="gaudeamus">
-                <div class="container-fluid">
-                    <hgroup>
-                        <h2>Gaudeamus</h2>
-                        <p>Üliõpilashümniks on laul "Gaudeamus".</p>
-                    </hgroup>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 col-md-5">
-                                <pre class="fw-bold">
+  <main>
+    <div class="container-fluid px-0 mt-3">
+      <img class="w-100 img-fluid" src="src/banner.png" alt="banner" />
+    </div>
+    <div class="container-fluid mb-2">
+      <div class="row">
+        <div class="col-12 col-md-10">
+          <h1 class="display-3 fst-italic">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <p class="fst-italic">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laboriosam, officia magni ex provident
+            <a id="link1" href="#">Lorem, ipsum dolor.</a> exercitationem, est
+            id dolorum ut et nobis rerum debitis a assumenda laborum iste odio
+            consequatur!
+          </p>
+        </div>
+        <div class="col-12 col-md-2">
+          <img src="src/tlu_h200.png" alt="TLÜ logo" class="img-fluid" id="tlu-logo" />
+        </div>
+      </div>
+    </div>
+    <section id="foto">
+      <div class="container-fluid border border-4 border-secondary pb-2">
+        <h2>Veebis saab kasutada</h2>
+        <div class="container-fluid border border-3 border-info">
+          <ol>
+            <li>
+              Teksti
+              <ul>
+                <li>Pealkirju</li>
+                <li>Tavateksti</li>
+                <li>Loendeid</li>
+              </ul>
+            </li>
+            <li>Graafikat</li>
+            <li>Heli</li>
+            <li>Videot</li>
+          </ol>
+        </div>
+      </div>
+      <div class="container-fluid border border-warning pb-2">
+        <h3>Mõistete loend</h3>
+        <div class="container-fluid border border-danger-subtle">
+          <dl>
+            <dt>Internet</dt>
+            <dd>Ülemaailmne arvutivõrke ühendav võrk</dd>
+          </dl>
+        </div>
+        <div class="container-fluid border border-danger">
+          <dl>
+            <dt>Veeb</dt>
+            <dd>Ülemaailmne hajus hüpertekstil põhinev infosüsteem</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid border border-secondary mb-2">
+        <h2>Fotod veebilehel</h2>
+        <figure class="figure">
+          <img src="src/house.png" alt="pilt" class="img-fluid" />
+          <figcaption>Vaade Tallinna Ülikooli Astra õppehoonele</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="meedia">
+      <div class="container-fluid text-center border border-danger">
+        <h2 class="mb-5 display-2">Meedia veebis</h2>
+        <div class="mb-5">
+          <hgroup>
+            <h3 class="display-5">Heli veebis</h3>
+            <p>
+              Veebis saab kasutada mitmeid audio failivorminguid. Standardis
+              on ette nähtud: wav, ogg, mp3 ja m4a
+            </p>
+          </hgroup>
+          <audio src="src/04_Track_4.mp3" controls class="w-75 w-md-50"></audio>
+        </div>
+        <div class="mb-5">
+          <hgroup>
+            <h3 class="display-5">Video veebis</h3>
+            <p>
+              Veebis saab kasutada mitmeid video failivorminguid. Standardis
+              on ette nähtud: mp4, webm ja ogv
+            </p>
+          </hgroup>
+          <video src="src/haridusvalgustab.mp4" controls preload="auto" poster="src/tlu_annab_hariduse.jpg"
+            class="w-75 w-md-50"></video>
+        </div>
+        <div class="mb-5">
+          <hgroup>
+            <h3 class="display-5">Youtube video veebilehel</h3>
+            <p>
+              Lehele tuleb lisada vastav kood, mida leiab YouTube'i
+              jagamisvalikust.
+            </p>
+          </hgroup>
+          <div class="container-fluid d-flex justify-content-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zBjJUV-lzHo?si=YkfB4Sh16blqsN0a"
+              title="YouTube video player" allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gaudeamus">
+      <div class="container-fluid">
+        <hgroup>
+          <h2>Gaudeamus</h2>
+          <p>Üliõpilashümniks on laul "Gaudeamus".</p>
+        </hgroup>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <pre class="fw-bold">
                                     :,: Gaudeamus igitur
                                     juvenes dum sumus! :,:
                                     Post jucundam juventutem,
@@ -213,98 +237,109 @@
                                     quivis antiburschius,
                                     :,: atque irrisores! :,:
                                 </pre>
-                            </div>
-                            <div class="col-12 col-md-7 mb-3">
-                                <h2 class="text-center">Lorem, ipsum dolor.</h2>
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 col-md-4">
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, maxime?</p>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-md-4">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, similique?</p>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-md-4">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, nisi.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-12 col-md-7 mb-3">
+              <h2 class="text-center">Lorem, ipsum dolor.</h2>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, maxime?
+                  </p>
                 </div>
-            </section>
-            <section>
-                <div class="container-lg mb-2 p-3" id="kaart">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/684/400/200" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/685/400/200" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/686/400/200" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                            <div class="card">
-                                <img src="https://picsum.photos/id/687/400/200" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, error.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nobis, similique?
+                  </p>
                 </div>
-            </section>
-        </main>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Dolore, nisi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-lg mb-2 p-3" id="kaart">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://picsum.photos/id/684/400/200" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorum, error.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://picsum.photos/id/685/400/200" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorum, error.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://picsum.photos/id/686/400/200" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorum, error.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://picsum.photos/id/687/400/200" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorum, error.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="container-fluid card-footer text-muted border-top border-secondary text-center">
+      <p>Tallinna Ülikool, Digitehnoloogia instituut</p>
+      <address>Narva mnt 25, Tallinn 10120</address>
+    </div>
+  </footer>
 
-        <footer>
-            
-             <div class="container-fluid card-footer text-muted border-top border-secondary text-center">
-                <p>Tallinna Ülikool, Digitehnoloogia instituut</p>
-                <address>Narva mnt 25, Tallinn 10120</address>
-             </div>
-        </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
 
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
 </html>
