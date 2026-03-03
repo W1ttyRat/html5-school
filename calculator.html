@@ -12,6 +12,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="css/calculator.css">
+
+    <script src="js/calculator.js" defer></script>
 </head>
 
 <body>
@@ -63,60 +65,75 @@
                 <div class="screen">
                     <input type="text" class="form-control" id="calculator-screen" readonly>
                 </div>
+                <div class="row row-cols-auto g-2 mb-2 mt-2">
+                    <div class="col">
+                        <button type="button" class="btn btn-secondary" onclick="clearScreen()">C</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('(')">(</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator(')')">)</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('%')">%</button>
+                    </div>
+
+                </div>
                 <div class="row row-cols-auto g-2 mb-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">7</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(7)">7</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">8</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(8)">8</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">9</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(9)">9</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">/</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('/')">/</button>
                     </div>
                 </div>
                 <div class="row row-cols-auto g-2 mb-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">4</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(4)">4</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">5</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(5)">5</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">6</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(6)">6</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">*</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('*')">*</button>
                     </div>
                 </div>
                 <div class="row row-cols-auto g-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(1)">1</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">2</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(2)">2</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">3</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(3)">3</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">-</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('-')">-</button>
                     </div>
                 </div>
                 <div class="row row-cols-auto g-2 mt-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">0</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber(0)">0</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">.</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputNumber('.')">.</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">=</button>
+                        <button type="button" class="btn btn-secondary" onclick="calculate()">=</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary">+</button>
+                        <button type="button" class="btn btn-secondary" onclick="inputOperator('+')">+</button>
                     </div>
                 </div>
             </div>

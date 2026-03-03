@@ -8,8 +8,65 @@ body {
     background-size: cover;
 }
 
-.nav-link {
-    color: black;
+.four-photos {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+}
+
+.four-photos * {
+    position: absolute;
+    margin: 0;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    rotate: 5deg;
+    /*transition-property: scale, rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;*/
+    transition: all 1s ease-in-out;
+}
+
+.four-photos > img:hover {
+    rotate: 0deg;
+    scale: 1.5;
+    z-index: 1;
+}
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-left:hover {
+    transform-origin: top left;
+}
+
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.top-right:hover {
+    transform-origin: top right;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-left:hover {
+    transform-origin: bottom left;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-right:hover {
+    transform-origin: bottom right;
 }
 
 #link1 {
@@ -30,3 +87,98 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.animArea {
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+}
+
+.animArea * {
+    position: absolute;
+}
+
+.redElement {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    animation-name: crazyAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /*animation-delay: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;*/
+}
+
+.redElement2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: crazyAnim2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes crazyAnim {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+    25% {
+        top: 0;
+        left: 1100px;
+        background-color: blue;
+    }
+    50% {
+        top: 500px;
+        left: 1100px;
+        background-color: green;
+    }
+    75% {
+        top: 500px;
+        left: 0;
+        background-color: yellow;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+}
+
+@keyframes crazyAnim2 {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+
+    25% {
+        top: 0px;
+        left: 1100px;
+        background-color: blue;
+    }
+    50% {
+        top: 500px;
+        left: 1100px;
+        background-color: green;
+    }
+
+    75% {
+        top: 500px;
+        left: 0px;
+        background-color: yellow;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+}
+
+
