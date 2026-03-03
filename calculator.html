@@ -63,77 +63,72 @@
         <div class="container">
             <div class="calculator border border-5 rounded bg-primary p-3 mt-4">
                 <div class="screen">
-                    <input type="text" class="form-control" id="calculator-screen" readonly>
+                    <input type="text" class="form-control" id="display" readonly>
                 </div>
                 <div class="row row-cols-auto g-2 mb-2 mt-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="clearScreen()">C</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearDisplay()">C</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('(')">(</button>
+                        <button type="button" class="btn btn-secondary" id="del-button"
+                            onclick="deleteLast()">DEL</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator(')')">)</button>
+                        <button type="button" class="btn btn-warning" onclick="inputOperator('/')">/</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('%')">%</button>
-                    </div>
-
-                </div>
-                <div class="row row-cols-auto g-2 mb-2">
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(7)">7</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(8)">8</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(9)">9</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('/')">/</button>
+                        <button type="button" class="btn btn-warning" onclick="inputOperator('*')">×</button>
                     </div>
                 </div>
                 <div class="row row-cols-auto g-2 mb-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(4)">4</button>
+                        <button type="button" class="btn btn-light" onclick="inputNumber('7')">7</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(5)">5</button>
+                        <button type="button" class="btn btn-light" onclick="inputNumber('8')">8</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(6)">6</button>
+                        <button type="button" class="btn btn-light" onclick="inputNumber('9')">9</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('*')">*</button>
+                        <button type="button" class="btn btn-warning" onclick="inputOperator('-')">−</button>
+                    </div>
+                </div>
+                <div class="row row-cols-auto g-2 mb-2">
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('4')">4</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('5')">5</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('6')">6</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-warning" onclick="inputOperator('+')">+</button>
+                    </div>
+                </div>
+                <div class="row row-cols-auto g-2 mb-2">
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('1')">1</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('2')">2</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('3')">3</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-light" onclick="inputNumber('.')">.</button>
                     </div>
                 </div>
                 <div class="row row-cols-auto g-2">
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(1)">1</button>
+                        <button type="button" class="btn btn-light" id="zero-button"
+                            onclick="inputNumber('0')">0</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(2)">2</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(3)">3</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('-')">-</button>
-                    </div>
-                </div>
-                <div class="row row-cols-auto g-2 mt-2">
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber(0)">0</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputNumber('.')">.</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="calculate()">=</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" onclick="inputOperator('+')">+</button>
+                        <button type="button" class="btn btn-success" id="equal-button" onclick="calculate()">=</button>
                     </div>
                 </div>
             </div>

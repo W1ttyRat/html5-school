@@ -15,3 +15,15 @@
     margin-bottom: 10px;
     width: 100%;
 }
+
+#zero-button {
+    width: 90px;
+}
+
+#equal-button {
+    width: 90px;
+}
+
+#del-button {
+    padding: 0;
+}
