@@ -210,16 +210,17 @@ function checkSolution() {
         console.log('Current user board does not match the solution.');
     }
 
-    if (currentInputRow && currentInputCol !== completeSolution[currentInputRow][currentInputCol]) {
-        console.log(`Incorrect input at (${currentInputRow}, ${currentInputCol}). Expected: ${completeSolution[currentInputRow][currentInputCol]}, Got: ${userBoard[currentInputRow][currentInputCol]}`);
-    } else {
-        console.log(`Correct input at (${currentInputRow}, ${currentInputCol}).`);
+    // check if the current input cell is correct or not
+    if (currentInputRow !== '' && currentInputCol !== '') {
+        const userValue = userBoard[currentInputRow][currentInputCol];
+        const correctValue = completeSolution[currentInputRow][currentInputCol];
+
+        if (userValue !== correctValue) {
+            console.log(`Incorrect input at (${currentInputRow}, ${currentInputCol}). Expected: ${completeSolution[currentInputRow][currentInputCol]}, Got: ${userBoard[currentInputRow][currentInputCol]}`);
+        } else {
+            console.log(`Correct input at (${currentInputRow}, ${currentInputCol}).`);
+        }
     }
-
-
-
-
-
 }
 
 function init() {
