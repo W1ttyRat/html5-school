@@ -4,7 +4,8 @@ function createGrid() {
 
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
-            const cell = document.createElement('div');
+            const cell = document.createElement('input');
+            cell.type = 'text';
             cell.classList.add('cell');
 
             if (j === 2 || j === 5) {
@@ -36,12 +37,42 @@ function createSudokuBoard() {
 }
 
 function fillGrid(board) {
+
+    // ***********************************************
+    // Fill the grid with the values from the board and set up event listeners for user input
+    // ***********************************************
+
     const cells = document.querySelectorAll('.cell');
+
     cells.forEach((cell, index) => {
         const row = Math.floor(index / 9);
         const col = index % 9;
-        cell.textContent = board[row][col] || '';
-    })
+        const value = board[row][col];
+
+        cell.value = value || '';
+
+        if (value !== 0) {
+            cell.disabled = true; // Disable pre-filled cells
+        } else {
+            cell.disabled = false; // Enable empty cells for user input
+        }
+
+        cell.addEventListener('input', () => {
+            let input = parseInt(cell.value);
+
+            if (input.length > 1) {
+                cell.value = input[0]
+            }
+
+            if (input < 1 || input > 9 || isNaN(input)) {
+                cell.value = '';
+            } else {
+                cell.value = input; // Ensure only valid input is kept
+            }
+
+            checkUserInput(); // Check the solution after each input
+        });
+    });
 }
 
 function shuffleArray(array) {
@@ -95,7 +126,6 @@ function shuffleBoard(board) {
 }
 
 function removeCells(board, difficulty) {
-
     let cellsToRemove;
 
     switch (difficulty) {
@@ -107,6 +137,9 @@ function removeCells(board, difficulty) {
             break;
         case 'hard':
             cellsToRemove = 50;
+            break;
+        case 'expert':
+            cellsToRemove = 60;
             break;
     }
 
@@ -128,8 +161,49 @@ function generateSudokuGame(difficulty) {
     createGrid();
     let board = createSudokuBoard();
     board = shuffleBoard(board);
+
+    let solution = JSON.parse(JSON.stringify(board)); // Deep copy of the shuffled board for solution reference
+    console.log('Solution:', solution); // Log the solution for debugging purposes
+
     board = removeCells(board, difficulty); // You can change the difficulty here
     fillGrid(board);
+}
+
+function checkUserInput() {
+
+    // ***********************************************
+    // This function will check the user's input against the solution and provide feedback
+    // ***********************************************
+
+    const cells = document.querySelectorAll('.cell');
+    let userBoard = [];
+
+    for (let i = 0; i < 9; i++) {
+        userBoard[i] = [];
+        for (let j = 0; j < 9; j++) {
+            const cell = cells[i * 9 + j];
+            userBoard[i][j] = parseInt(cell.value) || 0; // Convert input to number, default to 0 if empty
+            console.log(`User input at (${i}, ${j}):`, userBoard[i][j]);
+
+        }
+
+    }
+    console.log(userBoard);
+    return userBoard;
+}
+
+function checkSolution() {
+
+    // ***********************************************
+    // This function will check if the user's solution is correct and provide feedback
+    // ***********************************************
+
+    const userBoard = checkUserInput();
+    const solution = createSudokuBoard();
+}
+
+function init() {
+    generateSudokuGame('easy'); // Start with an easy game by default
 }
 
 const difficultyButtons = document.querySelectorAll('#easy, #medium, #hard, #expert');
@@ -140,4 +214,5 @@ difficultyButtons.forEach(button => {
     });
 });
 
+init();
 
