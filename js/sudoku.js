@@ -70,7 +70,11 @@ function fillGrid(board) {
                 cell.value = input; // Ensure only valid input is kept
             }
 
-            checkUserInput(); // Check the solution after each input
+            currentInputRow = row;
+            currentInputCol = col;
+
+            checkUserInput(); // Check user input after each change
+            checkSolution(); // Check the solution after each input
         });
     });
 }
@@ -162,8 +166,8 @@ function generateSudokuGame(difficulty) {
     let board = createSudokuBoard();
     board = shuffleBoard(board);
 
-    let solution = JSON.parse(JSON.stringify(board)); // Deep copy of the shuffled board for solution reference
-    console.log('Solution:', solution); // Log the solution for debugging purposes
+    completeSolution = JSON.parse(JSON.stringify(board)); // Deep copy of the complete solution
+    console.log('Solution:', completeSolution); // Log the solution for debugging purposes
 
     board = removeCells(board, difficulty); // You can change the difficulty here
     fillGrid(board);
@@ -183,7 +187,7 @@ function checkUserInput() {
         for (let j = 0; j < 9; j++) {
             const cell = cells[i * 9 + j];
             userBoard[i][j] = parseInt(cell.value) || 0; // Convert input to number, default to 0 if empty
-            console.log(`User input at (${i}, ${j}):`, userBoard[i][j]);
+            // console.log(`User input at (${i}, ${j}):`, userBoard[i][j]);
 
         }
 
@@ -197,14 +201,34 @@ function checkSolution() {
     // ***********************************************
     // This function will check if the user's solution is correct and provide feedback
     // ***********************************************
-
     const userBoard = checkUserInput();
-    const solution = createSudokuBoard();
+
+    if (JSON.stringify(userBoard) === JSON.stringify(completeSolution)) {
+        alert('Congratulations! You solved the Sudoku!');
+    } else {
+        // Optionally, you can provide more specific feedback on which cells are incorrect
+        console.log('Current user board does not match the solution.');
+    }
+
+    if (currentInputRow && currentInputCol !== completeSolution[currentInputRow][currentInputCol]) {
+        console.log(`Incorrect input at (${currentInputRow}, ${currentInputCol}). Expected: ${completeSolution[currentInputRow][currentInputCol]}, Got: ${userBoard[currentInputRow][currentInputCol]}`);
+    } else {
+        console.log(`Correct input at (${currentInputRow}, ${currentInputCol}).`);
+    }
+
+
+
+
+
 }
 
 function init() {
     generateSudokuGame('easy'); // Start with an easy game by default
 }
+
+let completeSolution;
+let currentInputRow = '';
+let currentInputCol = '';
 
 const difficultyButtons = document.querySelectorAll('#easy, #medium, #hard, #expert');
 difficultyButtons.forEach(button => {
