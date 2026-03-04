@@ -75,6 +75,14 @@ function fillGrid(board) {
 
             checkUserInput(); // Check user input after each change
             checkSolution(); // Check the solution after each input
+
+            if (checkSolution()) {
+                cell.classList.add('correct');
+                cell.classList.remove('incorrect');
+            } else {
+                cell.classList.add('incorrect');
+                cell.classList.remove('correct');
+            }
         });
     });
 }
@@ -217,8 +225,10 @@ function checkSolution() {
 
         if (userValue !== correctValue) {
             console.log(`Incorrect input at (${currentInputRow}, ${currentInputCol}). Expected: ${completeSolution[currentInputRow][currentInputCol]}, Got: ${userBoard[currentInputRow][currentInputCol]}`);
+            return false;
         } else {
             console.log(`Correct input at (${currentInputRow}, ${currentInputCol}).`);
+            return true;
         }
     }
 }
