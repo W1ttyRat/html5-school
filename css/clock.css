@@ -24,6 +24,8 @@ main {
     width: 340px;
     height: 120px;
     margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .rectangle {
@@ -31,12 +33,14 @@ main {
     width: 340px;
     height: 120px;
     background: var(--rectangle-background);
-    transform: skewY(-5deg);
+    transform: skewY(-5deg) translateZ(0);
     box-shadow: inset -5px -5px 9px var(--shadow-light),
         inset 5px 5px 9px var(--shadow-dark),
         0px 10px 10px -10px var(--shadow-dark),
         10px 0px 10px -10px var(--shadow-dark);
     z-index: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .rectangle::before {
@@ -48,9 +52,10 @@ main {
     height: 100%;
     background: var(--background);
     transform-origin: right;
-    transform: skewY(45deg);
+    transform: skewY(45deg) translateZ(0);
     box-shadow: 0px 10px 10px -10px var(--shadow-dark),
         10px 0px 10px -10px var(--shadow-dark);
+    backface-visibility: hidden;
 }
 
 .rectangle::after {
@@ -60,9 +65,10 @@ main {
     left: 0;
     width: 100%;
     height: 30px;
-    background: var(--rectangle-background);
+    background: var(--background);
     transform-origin: bottom;
-    transform: skewX(45deg);;
+    backface-visibility: hidden;
+    transform: skewX(45deg) translateZ(0);
     box-shadow: -5px -5px 9px var(--shadow-light),
         5px 5px 9px var(--shadow-medium);
 }
@@ -78,7 +84,7 @@ main {
     height: 80px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) skewY(-5deg);
+    transform: translate(-50%, -50%) skewY(-5deg) translateZ(0);
     font-size: 40px;
     transform-origin: right;
     background-color: transparent;
