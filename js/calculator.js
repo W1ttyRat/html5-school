@@ -37,7 +37,7 @@ function calculate() {
             break;
         case "/":
             if (current === 0) {
-                alert("Cannot divide by zero");
+                document.getElementById("display").value = "Error: Division by zero";
                 return;
             }
             result = prev / current;

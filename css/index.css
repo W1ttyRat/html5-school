@@ -10,15 +10,17 @@ body {
 
 .four-photos {
     position: relative;
-    width: 1200px;
-    height: 800px;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 3/2;
+    margin: 0 auto;
 }
 
 .four-photos * {
     position: absolute;
     margin: 0;
-    width: 600px;
-    height: 400px;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     rotate: 5deg;
     /*transition-property: scale, rotate;
@@ -67,6 +69,12 @@ body {
 
 .bottom-right:hover {
     transform-origin: bottom right;
+}
+
+@media (max-width: 768px) {
+    .four-photos > img:hover {
+        scale: 1.2;
+    }
 }
 
 #link1 {
