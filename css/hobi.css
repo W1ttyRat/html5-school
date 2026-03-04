@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url(../src/hobi-bg.jpg) center / cover no-repeat;
+}
+
+main {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+
+#video1 {
+    max-width: 700px;
+}
+#video2 {
+    max-width: 300px;
+    max-height: 500px;
+}

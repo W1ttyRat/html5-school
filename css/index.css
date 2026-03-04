@@ -1,6 +1,7 @@
 body {
-    background-image: url(https://t4.ftcdn.net/jpg/02/67/40/21/360_F_267402109_jZvsqRQUvSxohAOmcUt549jlapqoRHM0.jpg);
-    background-size: cover;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .bg-image {
@@ -71,12 +72,6 @@ body {
     transform-origin: bottom right;
 }
 
-@media (max-width: 768px) {
-    .four-photos > img:hover {
-        scale: 1.2;
-    }
-}
-
 #link1 {
     color: red;
     text-decoration: none;
@@ -96,11 +91,31 @@ body {
     height: auto;
 }
 
+#foto {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+#meedia {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+#animationOnWeb {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
 .animArea {
-    width: 1200px;
-    height: 600px;
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 2/1;
     background-color: white;
     position: relative;
+    margin: 0 auto;
 }
 
 .animArea * {
@@ -139,16 +154,16 @@ body {
     }
     25% {
         top: 0;
-        left: 1100px;
+        left: calc(100% - 100px);
         background-color: blue;
     }
     50% {
-        top: 500px;
-        left: 1100px;
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
         background-color: green;
     }
     75% {
-        top: 500px;
+        top: calc(100% - 100px);
         left: 0;
         background-color: yellow;
     }
@@ -168,17 +183,17 @@ body {
 
     25% {
         top: 0px;
-        left: 1100px;
+        left: calc(100% - 100px);
         background-color: blue;
     }
     50% {
-        top: 500px;
-        left: 1100px;
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
         background-color: green;
     }
 
     75% {
-        top: 500px;
+        top: calc(100% - 100px);
         left: 0px;
         background-color: yellow;
     }
@@ -186,6 +201,21 @@ body {
         top: 0;
         left: 0;
         background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+    .four-photos > img:hover {
+        scale: 1.2;
+    }
+
+    .animArea {
+        aspect-ratio: 1/1;
+    }
+
+    .redElement, .redElement2 {
+        width: 60px;
+        height: 60px;
     }
 }
 

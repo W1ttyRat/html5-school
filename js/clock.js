@@ -1,14 +1,11 @@
+function updateClock() {
 
-const hourHand = document.querySelector('#hourHand');
-const minuteHand = document.querySelector('#minuteHand');
-const secondHand = document.querySelector('#secondHand');
-
-
-function updateHands() {
+    const hourHand = document.querySelector('#hourHand');
+    const minuteHand = document.querySelector('#minuteHand');
+    const secondHand = document.querySelector('#secondHand');
 
     const date = new Date();
 
-    
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
@@ -21,7 +18,11 @@ function updateHands() {
     minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
     secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 
+    document.querySelector('.hours').innerHTML = hours.toString().padStart(2, '0');
+    document.querySelector('.minutes').innerHTML = minutes.toString().padStart(2, '0');
+    document.querySelector('.seconds').innerHTML = seconds.toString().padStart(2, '0');
+
     console.log(`Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
 }
 
-setInterval(updateHands, 1000);
+setInterval(updateClock, 1000);

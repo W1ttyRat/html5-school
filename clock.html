@@ -23,7 +23,7 @@
     <header>
         <nav class="navbar navbar-expand-lg" id="home">
             <div class="container-fluid">
-                <div class="d-inline-block w-auto mt-1 pt-1">
+                <div class="d-inline-block w-auto mt-1 pt-1 ms-5">
                     <a class="navbar-brand" href="index.html">
                         <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo"
                             style="max-height: 50px; width: auto;">
@@ -73,13 +73,25 @@
                 <img src="src/clock_frame.png" alt="Clock frame" class="clock-frame">
                 <img src="src/clock_pendulum_2.png" alt="clock pendulum" class="pendulum">
                 <img src="src/clock_face_2.png" alt="Clock face" class="clock-face">
-                <div class="clock-face">
+                <div class="clock-hands">
                     <img src="src/second_hand.png" alt="second hand" class="clock-hand" id="secondHand">
                     <img src="src/minute_hand.png" alt="minute hand" class="clock-hand" id="minuteHand">
                     <img src="src/hour_hand.png" alt="hour hand" class="clock-hand" id="hourHand">
                 </div>
             </div>
         </div>
+
+        <div class="rectangle-container">
+            <div class="rectangle"></div>
+            <div class="time">
+                <p class="hours">12</p>
+                <p class="separator">:</p>
+                <p class="minutes">00</p>
+                <p class="seconds">&nbsp;</p>
+
+            </div>
+        </div>
+
     </main>
     <footer>
         <!-- place footer here -->
