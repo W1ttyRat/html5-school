@@ -2,7 +2,7 @@
 <html lang="et" data-bs-theme="dark">
 
 <head>
-    <title>carWorld</title>
+    <title>Clock</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -11,11 +11,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/carWorld.css" />
+    <link rel="stylesheet" href="css/clock.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <script src="js/carWorld.js" defer></script>
+    <script src="js/clock.js" defer></script>
+
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             <div class="container-fluid">
                 <div class="d-inline-block w-auto mt-1 pt-1 ms-5">
                     <a class="navbar-brand" href="index.html">
-                        <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo"
+                        <img src="assets/tlu_h200.png" alt="brand logo" id="brand-logo"
                             style="max-height: 50px; width: auto;">
                     </a>
                 </div>
@@ -43,10 +44,10 @@
                             <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold " href="clock.html">Kell</a>
+                            <a class="nav-link fw-bold active" aria-current="page" href="clock.html">Kell</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="carWorld.html">Car World</a>
+                            <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="calculator.html">Kalkulaator</a>
@@ -69,26 +70,31 @@
     </header>
 
     <main>
-        <div class="container justify-content-center text-center" id="jaanus">
-            <img src="src/earth.png" alt="Earth image" id="earth-img">
-            <div id="car-img">
-                <img src="src/redCar.png" alt="" id="car-body-img">
-                <img src="src/car-wheel.png" alt="" id="car-wheel-img-1" class="wheel">
-                <img src="src/car-wheel.png" alt="" id="car-wheel-img-2" class="wheel">
+        <div class="container-fluid bg-primary mt-5 p-0" id="box-div">
+            <div class="clock">
+                <img src="assets/clock_box.png" alt="Clock box" class="clock-box">
+                <img src="assets/clock_frame.png" alt="Clock frame" class="clock-frame">
+                <img src="assets/clock_pendulum_2.png" alt="clock pendulum" class="pendulum">
+                <img src="assets/clock_face_2.png" alt="Clock face" class="clock-face">
+                <div class="clock-hands">
+                    <img src="assets/second_hand.png" alt="second hand" class="clock-hand" id="secondHand">
+                    <img src="assets/minute_hand.png" alt="minute hand" class="clock-hand" id="minuteHand">
+                    <img src="assets/hour_hand.png" alt="hour hand" class="clock-hand" id="hourHand">
+                </div>
             </div>
-            <img src="src/moon.png" alt="moon image" id="moon-img">
         </div>
-        <div class="d-inline-block m-3" id="btns">
-            <div class="mb-2">
-                <button class="btn btn-outline-success me-2" id="fasterMoon">+</button>
-                <button class="btn btn-outline-primary me-2" id="rotateMoon">Pööra kuud</button>
-                <button class="btn btn-outline-danger me-2" id="slowerMoon">-</button>
+
+        <div class="rectangle-container">
+            <div class="rectangle"></div>
+            <div class="time">
+                <p class="hours">12</p>
+                <p class="separator">:</p>
+                <p class="minutes">00</p>
+                <p class="seconds">&nbsp;</p>
+
             </div>
-            <div class="mb-2">
-                <button class="btn btn-outline-success me-2" id="fasterEarth">+</button>
-                <button class="btn btn-outline-primary me-2" id="rotateEarth">Pööra maad</button>
-                <button class="btn btn-outline-danger me-2" id="slowerEarth">-</button>
-            </div>
+        </div>
+
     </main>
     <footer>
         <!-- place footer here -->

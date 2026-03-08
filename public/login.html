@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <div class="d-inline-block w-auto mt-1 pt-1 ms-5">
                     <a class="navbar-brand" href="index.html">
-                        <img src="src/tlu_h200.png" alt="brand logo" id="brand-logo"
+                        <img src="assets/tlu_h200.png" alt="brand logo" id="brand-logo"
                             style="max-height: 50px; width: auto;">
                     </a>
                 </div>
@@ -33,7 +33,6 @@
                     <ul class="nav navbar-nav justify-content-center w-75">
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="index.html">Pealeht</a>
-                        </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
@@ -87,27 +86,18 @@
             ">
                             <div class="card-body p-5 shadow-5 text-center">
                                 <h2 class="fw-bold mb-5">Logi sisse</h2>
-                                <form>
+                                <form id="loginForm">
 
                                     <!-- Email input -->
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" id="form3Example3" class="form-control" />
-                                        <label class="form-label" for="form3Example3">E-posti aadress</label>
+                                        <input type="email" id="email" class="form-control" />
+                                        <label class="form-label" for="email">E-posti aadress</label>
                                     </div>
 
                                     <!-- Password input -->
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" id="form3Example4" class="form-control" />
-                                        <label class="form-label" for="form3Example4">Parool</label>
-                                    </div>
-
-                                    <!-- Checkbox -->
-                                    <div class="form-check d-flex justify-content-center mb-4">
-                                        <input class="form-check-input me-2" type="checkbox" value=""
-                                            id="form2Example33" checked />
-                                        <label class="form-check-label" for="form2Example33">
-                                            Telli meie uudiskirja
-                                        </label>
+                                        <input type="password" id="password" class="form-control" />
+                                        <label class="form-label" for="password">Parool</label>
                                     </div>
 
                                     <!-- Submit button -->
@@ -158,6 +148,9 @@
         <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="js/login-submit.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
