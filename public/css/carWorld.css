@@ -52,3 +52,36 @@
 #car-wheel-img-2 {
     right: 68%;
 }
+
+#ufo-img {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    top: 40%;
+    left: 10%;
+    animation-name: ufoAnim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ufoAnim {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    20% {
+        transform: translate(1500px, -150px) rotate(45deg) scale(1.1);
+    }
+    40% {
+        transform: translate(500px, -300px) rotate(-30deg) scale(0.9);
+    }
+    60% {
+        transform: translate(200px, 400px) rotate(60deg) scale(1.2);
+    }
+    80% {
+        transform: translate(-150px, -200px) rotate(-45deg) scale(0.95);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
