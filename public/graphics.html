@@ -11,11 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/clock.css" />
+    <link rel="stylesheet" href="css/graphics.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <script src="js/clock.js" defer></script>
+    <script src="js/graphics.js" defer></script>
 
 </head>
 
@@ -44,7 +44,7 @@
                             <a class="nav-link fw-bold" href="hobi.html">Hobi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="clock.html">Kell</a>
+                            <a class="nav-link fw-bold" href="clock.html">Kell</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="carWorld.html">Car World</a>
@@ -55,8 +55,8 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="sudoku.html">Sudoku</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="graphics.html">Graafika</a>
+                        <li>
+                            <a class="nav-link fw-bold active" aria-current="page" href="graphics.html">Graafika</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-2">
@@ -73,31 +73,9 @@
     </header>
 
     <main>
-        <div class="container-fluid bg-primary mt-5 p-0" id="box-div">
-            <div class="clock">
-                <img src="assets/clock_box.png" alt="Clock box" class="clock-box">
-                <img src="assets/clock_frame.png" alt="Clock frame" class="clock-frame">
-                <img src="assets/clock_pendulum_2.png" alt="clock pendulum" class="pendulum">
-                <img src="assets/clock_face_2.png" alt="Clock face" class="clock-face">
-                <div class="clock-hands">
-                    <img src="assets/second_hand.png" alt="second hand" class="clock-hand" id="secondHand">
-                    <img src="assets/minute_hand.png" alt="minute hand" class="clock-hand" id="minuteHand">
-                    <img src="assets/hour_hand.png" alt="hour hand" class="clock-hand" id="hourHand">
-                </div>
-            </div>
-        </div>
-
-        <div class="rectangle-container">
-            <div class="rectangle"></div>
-            <div class="time">
-                <p class="hours">12</p>
-                <p class="separator">:</p>
-                <p class="minutes">00</p>
-                <p class="seconds">&nbsp;</p>
-
-            </div>
-        </div>
-
+        <section class="container">
+            <canvas width="1080" height="720" id="canvas"></canvas>
+        </section>
     </main>
     <footer>
         <!-- place footer here -->

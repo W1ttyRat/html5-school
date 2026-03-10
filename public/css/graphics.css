@@ -1,0 +1,19 @@
+main {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(135deg, #9e0000, #886d00, #004d00, #00004d);
+}
+
+canvas {
+    background-color: #f0f0f0;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 1080px;
+    max-height: 720px;
+    width: 100%;
+    height: 100%;
+}
