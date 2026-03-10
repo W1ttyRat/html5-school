@@ -22,7 +22,8 @@ function updateClock() {
     document.querySelector('.minutes').innerHTML = minutes.toString().padStart(2, '0');
     document.querySelector('.seconds').innerHTML = seconds.toString().padStart(2, '0');
 
-    console.log(`Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
+    // console.log(`Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
 }
 
+window.onload = updateClock;
 setInterval(updateClock, 1000);

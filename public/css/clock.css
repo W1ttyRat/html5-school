@@ -69,8 +69,7 @@ main {
     transform-origin: bottom;
     backface-visibility: hidden;
     transform: skewX(45deg) translateZ(0);
-    box-shadow: -5px -5px 9px var(--shadow-light),
-        5px 5px 9px var(--shadow-medium);
+    box-shadow: 5px 5px 9px var(--shadow-medium);
 }
 
 .time {
@@ -136,6 +135,7 @@ main {
     top: 420px;
     transform-origin: 50% 0%;
     transform: rotate(0deg);
+    animation: pendulum-swing 1s infinite ease-in-out alternate;
 }
 
 
@@ -143,7 +143,7 @@ main {
 .clock-hand {
     top: 10px;
     left: 158px;
-    transform-origin: center 172px;
+    transform-origin: center 178px;
 }
 
 #secondHand {
@@ -156,4 +156,13 @@ main {
 
 #hourHand {
     transform: rotate(0deg);
+}
+
+@keyframes pendulum-swing {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+    }
 }
