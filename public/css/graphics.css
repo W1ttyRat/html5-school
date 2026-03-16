@@ -3,7 +3,7 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-    background: linear-gradient(135deg, #9e0000, #886d00, #004d00, #00004d);
+    background: linear-gradient(135deg, #5acf7f, #7d713f, #47687c, #9e7789);
 }
 
 canvas {
