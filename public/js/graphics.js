@@ -3,10 +3,10 @@ const ctx = canvas.getContext('2d');
 
 let centerX = canvas.width / 2;
 
-let trunkHeight = 100;
-let branchLengthRatio = 0.75;
-let branchAngleDifference = 0.27;
-let branchingDepth = 10;
+let trunkHeight = 100; // tüve kõrgus, ehk esimese haru pikkus
+let branchLengthRatio = 0.75; // harude pikkuse ja eelkäija pikkuse suhe
+let branchAngleDifference = 0.27; // harude nurga vahekaugus (radianites), mida kasutatakse harude joonistamisel
+let branchingDepth = 10; // harude sügavus, ehk mitu korda harud jagunevad
 
 
 // rekursiivne funktsioon, mis joonistab enda ja lapsharu, kuni "depth" on 0
