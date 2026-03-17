@@ -1,0 +1,37 @@
+main {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(135deg, #aa76c3, #3fbd5f, #7ca5db, #9e7789);
+}
+
+canvas {
+    background-color: #f0f0f0;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 1080px;
+    max-height: 720px;
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#saveBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
