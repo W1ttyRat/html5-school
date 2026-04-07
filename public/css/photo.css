@@ -1,0 +1,19 @@
+#photo1, #photo2 {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photos {
+    width: 600px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photos * {
+    position: absolute;
+}
