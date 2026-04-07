@@ -11,11 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="css/graphics.css" />
+    <link rel="stylesheet" href="css/media.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <script src="js/graphics.js" defer></script>
+    <script src="js/media.js" defer></script>
 
 </head>
 
@@ -55,8 +55,8 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="sudoku.html">Sudoku</a>
                         </li>
-                        <li>
-                            <a class="nav-link fw-bold active" aria-current="page" href="graphics.html">Graafika</a>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="graphics.html">Graafika</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="draw.html">Joonistus</a>
@@ -65,7 +65,7 @@
                             <a class="nav-link fw-bold" href="photo.html">Fotod</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="media.html">Meedia</a>
+                            <a class="nav-link fw-bold active" aria-current="page" href="media.html">Meedia</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-2">
@@ -82,8 +82,18 @@
     </header>
 
     <main>
-        <section class="container">
-            <canvas width="1080" height="720" id="canvas"></canvas>
+        <section>
+            <div class="container">
+                <h2>Meediaelemendid veebis</h2>
+                <button id="musicBtn" type="button">Oota!</button>
+                <p>Muusika positsioon: <span id="musicPos">0:00:00:000</span></p>
+                <input type="range" id="musicPosBtn" min="0" value="0" step=".001">
+                <br>
+                <label for="volBtn">Helitugevus: </label>
+                <input type="range" id="volBtn" min="0" max="1" value="1" step=".01" value=".7">
+                <label for="speedBtn">Esituskiirus: </label>
+                <input type="range" id="speedBtn" min=".1" max="5" value="1" step=".01">
+            </div>
         </section>
     </main>
     <footer>

@@ -1,3 +1,5 @@
+
+
 function updateClock() {
 
     const hourHand = document.querySelector('#hourHand');
