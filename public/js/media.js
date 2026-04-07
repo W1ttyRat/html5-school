@@ -1,8 +1,27 @@
 const musicURL = "assets/valss_orn_kevade_orig.mp3";
 let music = new Audio();
 
+let movie;
+let titleMode = "showing"; // hidden, showing, disabled
+let titleNum = 0;
+
 window.onload = function () {
     initMusic();
+    initVideo();
+}
+
+function initVideo() {
+    movie = document.getElementById("ifiVideo");
+    movie.textTracks[titleNum].mode = titleMode;
+    movie.textTracks[titleNum].addEventListener("cuechange", displaySubtitle);
+    document.getElementById("titleBtn").addEventListener("click", changeSubtitleLang);
+}
+
+function changeSubtitleLang() {
+    movie.textTracks[titleNum].mode = "disabled";
+    titleNum++;
+    titleNum = titleNum % movie.textTracks.length;
+    movie.textTracks[titleNum].mode = titleMode;
 }
 
 function initMusic() {
@@ -11,6 +30,17 @@ function initMusic() {
     music.src = musicURL;
     document.getElementById("volBtn").addEventListener("input", setVol);
     document.getElementById("speedBtn").addEventListener("input", setSpeed);
+}
+
+function displaySubtitle() {
+    let currentSubtitle = "";
+    if (movie.textTracks[titleNum].activeCues.length > 0) {
+        for (let i = 0; i < movie.textTracks[titleNum].activeCues.length; i++) {
+            currentSubtitle += movie.textTracks[titleNum].activeCues[i].id + ": " +
+            movie.textTracks[titleNum].activeCues[i].text + "<br>";
+        }
+    }
+    document.getElementById("subtitlePlace").innerHTML = currentSubtitle;
 }
 
 function preparePlay() {

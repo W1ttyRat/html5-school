@@ -1,4 +1,6 @@
-
+let timeSpeaker = new Audio();
+const speakURL = "assets/valss_orn_kevade_orig.mp3";
+let wordsToSay = [];
 
 function updateClock() {
 
@@ -27,5 +29,48 @@ function updateClock() {
     // console.log(`Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`);
 }
 
-window.onload = updateClock;
+function tellTime() {
+    document.getElementById("speakBtn").disabled = true;
+    const timeNow = new Date();
+    wordsToSay.push("kell on");
+    numToWords(timeNow.getHours());
+    wordsToSay.push("ja");
+    numToWords(timeNow.getMinutes());
+    // console.log(wordsToSay);
+    timeSpeaker.addEventListener("ended", speak);
+}
+
+function numToWords(num) {
+    if(num <= 10) {
+        wordsToSay.push(num);
+    } else {
+        if(num < 20) {
+            wordsToSay.push(num%10);
+            wordsToSay.push("teist");
+        } else {
+            wordsToSay.push(Math.floor(num/10));
+            wordsToSay.push("kymmend");
+            if(num%10 > 0) {
+                wordsToSay.push(num%10);
+            }
+        }
+    }
+}
+
+function speak() {
+    console.log(wordsToSay);
+    if (wordsToSay.length > 0) {
+        timeSpeaker.src = speakURL + wordsToSay[0] + ".mp3";
+        timeSpeaker.play();
+        wordsToSay.shift();
+    } else {
+        timeSpeaker.removeEventListener("ended", speak);
+        document.getElementById("speakBtn").disabled = false;
+    }
+}
+
+window.onload = function() {
+    updateClock();
+    document.getElementById("speakBtn").addEventListener("click", tellTime);
+};
 setInterval(updateClock, 1000);

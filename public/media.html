@@ -84,7 +84,7 @@
     <main>
         <section>
             <div class="container">
-                <h2>Meediaelemendid veebis</h2>
+                <h2>Heli juhtimine javascriptiga</h2>
                 <button id="musicBtn" type="button">Oota!</button>
                 <p>Muusika positsioon: <span id="musicPos">0:00:00:000</span></p>
                 <input type="range" id="musicPosBtn" min="0" value="0" step=".001">
@@ -93,6 +93,18 @@
                 <input type="range" id="volBtn" min="0" max="1" value="1" step=".01" value=".7">
                 <label for="speedBtn">Esituskiirus: </label>
                 <input type="range" id="speedBtn" min=".1" max="5" value="1" step=".01">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Video subtiitritega</h2>
+                <video id="ifiVideo" controls width="600" preload="none">
+                    <source src="assets/haridusvalgustab.mp4" type="video/mp4">
+                    <track id="subEt" kind="subtitles" label="Eestikeelsed subtiitrid" srclang="et" src=""></track>
+                    <track id="subFi" kind="subtitles" label="Suomenkieliset tekstitykset" srclang="fi" src=""></track>
+                </video>
+                <p>Tekst: <span id="subtitlePlace"></span></p>
+                <button id="subtitleBtn" type="button">Vaheta subtiitrite keel</button>
             </div>
         </section>
     </main>
