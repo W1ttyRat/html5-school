@@ -14,6 +14,12 @@ function updateClock() {
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
+    if (minutes === 0 && seconds === 0 && document.getElementById("enableC").checked) {
+        const chimeAudio = new Audio('assets/chime.mp3');
+        chimeAudio.volume = 0.02;
+        chimeAudio.play();
+    }
+
     const hourDegrees = (hours / 12) * 360 + (minutes / 60) * 30;
     const minuteDegrees = (minutes / 60) * 360 + (seconds / 60) * 6;
     const secondDegrees = (seconds / 60) * 360;
@@ -30,6 +36,7 @@ function updateClock() {
 }
 
 function tellTime() {
+    wordsToSay = [];
     document.getElementById("speakBtn").disabled = true;
     const timeNow = new Date();
     wordsToSay.push("kell on");
@@ -38,20 +45,21 @@ function tellTime() {
     numToWords(timeNow.getMinutes());
     // console.log(wordsToSay);
     timeSpeaker.addEventListener("ended", speak);
+    speak();
 }
 
 function numToWords(num) {
-    if(num <= 10) {
+    if (num <= 10) {
         wordsToSay.push(num);
     } else {
-        if(num < 20) {
-            wordsToSay.push(num%10);
+        if (num < 20) {
+            wordsToSay.push(num % 10);
             wordsToSay.push("teist");
         } else {
-            wordsToSay.push(Math.floor(num/10));
+            wordsToSay.push(Math.floor(num / 10));
             wordsToSay.push("kymmend");
-            if(num%10 > 0) {
-                wordsToSay.push(num%10);
+            if (num % 10 > 0) {
+                wordsToSay.push(num % 10);
             }
         }
     }
@@ -60,7 +68,8 @@ function numToWords(num) {
 function speak() {
     console.log(wordsToSay);
     if (wordsToSay.length > 0) {
-        timeSpeaker.src = speakURL + wordsToSay[0] + ".mp3";
+        timeSpeaker.src = speakURL;
+        timeSpeaker.volume = 0.02;
         timeSpeaker.play();
         wordsToSay.shift();
     } else {
@@ -69,7 +78,7 @@ function speak() {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     updateClock();
     document.getElementById("speakBtn").addEventListener("click", tellTime);
 };

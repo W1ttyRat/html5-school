@@ -1,0 +1,117 @@
+body {
+    background-color: #def;
+    margin: 0;
+    padding: 0;
+}
+
+section, header {
+    margin: 10px;
+    padding: 20px;
+}
+
+section {
+    border: 4px, solid #9ac;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 0 0 5px rgb(0, 85, 255);
+}
+
+p {
+    text-indent: 1cm;
+    line-height: 125%;
+    font-family: Calibri, wingdings;
+}
+
+h1, h2, h3 {
+    font-family: witty, sans-serif;
+    letter-spacing: 5px;
+}
+
+
+.textColumns {
+    /*column-count: 3;*/
+    /*column-width: 100px;*/
+    columns: 200px 3;
+    column-gap: 40px;
+    column-rule: 2px solid #9ac;
+}
+
+@font-face {
+    font-family: witty;
+    src: url(../assets/Monas-BLBW8.ttf);
+    /* truetype otf eot woff svg */
+}
+
+a:link {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration-line: overline underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 40px;
+    text-decoration-style: wavy;
+}
+
+a:active {
+    text-decoration-line: overline underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 500px;
+    text-decoration-style: double;
+}
+
+.verticalText {
+    writing-mode: vertical-rl;
+}
+
+#youngCicero {
+    border-radius: 50%;
+}
+
+#cicero figure {
+    float: left;
+}
+
+#cicero h3 {
+    clear: both;
+}
+
+section > img {
+    border: 8px solid #9ac;
+}
+
+h2+p {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+p+h2+p {
+    font-weight: 600;
+}
+
+p+h2+p span {
+    font-weight: 900;
+    color: red;
+}
+
+h3~p {
+    color: gray;
+}
+
+[title] {
+    color: #679;
+}
+
+[id^="chapter"] {
+    border-style: dashed;
+}
+
+:lang(en) {
+    font-style: oblique;
+}
+
+td:empty {
+    background-color: pink;
+}
