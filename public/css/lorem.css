@@ -115,3 +115,31 @@ h3~p {
 td:empty {
     background-color: pink;
 }
+
+:target {
+    border-color: blue;
+}
+
+p:first-child {
+    background-color: gray;
+}
+
+p:last-child {
+    background-color: #9ac;
+}
+
+section:first-of-type {
+    border-radius: 40px 40px 0 0;
+}
+
+section:last-of-type {
+    border-radius: 0 0 40px 40px;
+}
+
+mark:only-of-type {
+    background-color: #cfc;
+}
+
+h1::first-letter, h2::first-letter, h3::first-letter {
+    font-family: wingdings;
+}
